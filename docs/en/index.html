@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Page title -->
+  <title id="title">Microlanding web page constructor</title>
+  <!-- Page description -->
+  <meta id="description" name="description" content="Create a personal web page in 10 minutes. No programming or web design skills required. Extend your Instagram profile, locate multiple links to messengers, social networks and more."/>
+  <!-- Meta -->
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <!-- End of Meta -->
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../assets/img/common/favicon/favicon-57x57.png"/>
+  <link rel="apple-touch-icon" sizes="60x60" href="../assets/img/common/favicon/favicon-60x60.png"/>
+  <link rel="apple-touch-icon" sizes="72x72" href="../assets/img/common/favicon/favicon-72x72.png"/>
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/common/favicon/favicon-76x76.png"/>
+  <link rel="apple-touch-icon" sizes="114x114" href="../assets/img/common/favicon/favicon-114x114.png"/>
+  <link rel="apple-touch-icon" sizes="120x120" href="../assets/img/common/favicon/favicon-120x120.png"/>
+  <link rel="apple-touch-icon" sizes="144x144" href="../assets/img/common/favicon/favicon-144x144.png"/>
+  <link rel="apple-touch-icon" sizes="152x152" href="../assets/img/common/favicon/favicon-152x152.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/common/favicon/favicon-180x180.png"/>
+  <link rel="icon" type="image/png" href="../assets/img/common/favicon/favicon-32x32.png" sizes="32x32"/>
+  <link rel="icon" type="image/png" href="../assets/img/common/favicon/favicon-192x192.png" sizes="192x192"/>
+  <link rel="icon" type="image/png" href="../assets/img/common/favicon/favicon-96x96.png" sizes="96x96"/>
+  <link rel="icon" type="image/png" href="../assets/img/common/favicon/favicon-16x16.png" sizes="16x16"/>
+
+  <link rel="manifest" href="../assets/img/common/favicon/manifest.json"/>
+
+  <link rel="shortcut icon" href="../assets/img/common/favicon/favicon.ico"/>
+  <meta name="msapplication-TileColor" content="#da532c"/>
+  <meta name="msapplication-TileImage" content="../assets/img/common/favicon/favicon-144x144.png"/>
+  <meta name="theme-color" content="#ffffff"/>
+  <!-- End of Favicon -->
+  <!-- StyleSheets -->
+  <link rel="stylesheet" href="../dist/style.css"/>
+  <!-- End of StyleSheets -->
+</head>
+
+<body class="js-preload-me ">
+  <!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+  <!-- Preloader -->
+  <div class="preloader js-preloader ">
+    <span class="preloader__circle preloader__circle--primary"></span>
+    <span class="preloader__circle preloader__circle--secondary"></span>
+    <span class="preloader__circle preloader__circle--tertiary"></span>
+  </div>
+  <!-- End of Preloader -->
+
+  <!-- Page -->
+  <div class="page js-page ">
+    <!-- Mobile Menu -->
+    <div id="sidr">
+      <div class="mobile-menu__close js-mobile-menu__close"></div>
+      <ul class="mobile-menu js-mobile-menu ">
+        <li class="mobile-menu__item ">
+          <a id="mmenu_home" href="#" class="mobile-menu__link js-scroll-top">Home</a>
+        </li>
+        <li class="mobile-menu__item ">
+          <a id="mmenu_features" href="#features" class="mobile-menu__link js-scroll-to">Features</a>
+        </li>
+        <li class="mobile-menu__item ">
+          <a id="mmenu_plans" href="#plans" class="mobile-menu__link js-scroll-to">Plans</a>
+        </li>
+        <li class="mobile-menu__item ">
+          <a id="mmenu_gallery" href="#gallery" class="mobile-menu__link js-scroll-to">Gallery</a>
+        </li>
+        <li class="mobile-menu__item mobile-menu__item--button">
+          <a id="mmenu_login" onclick="goto_login();" class="mobile-menu__link js-scroll-to">Log in</a>
+        </li>
+
+        <li class="mobile-menu__item">
+          <a id="mmenu_lang" class="fontello-globe mobile-menu__link">English</a>
+          <ul class="mobile-menu__child">
+            <li class="mobile-menu__item">
+              <a href="../en/index.html" class="mobile-menu__link">English</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="../de/index.html" class="mobile-menu__link">Deutsche</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="../fr/index.html" class="mobile-menu__link">Französisch</a>
+            </li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+    <!-- End of Mobile Menu -->
+
+    <!-- Header -->
+        
+    <header class="header js-header header--fixed">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <!-- Logo -->
+            <div class="logo ">
+              <a href="index.html" class="logo__link">
+                <img src="../assets/img/common/logo/logo.png" alt="Logo" class="logo__image js-logo__image" data-switch="true"/>
+              </a>
+<!--
+              <a href="index.html" class="logo__link">My<span class='section-title__highlight'>Info</span></a>
+-->
+            </div>
+            <!-- End of Logo -->
+          </div>
+
+          <div class="col-md-20 col-sm-20 col-xs-12">
+            <!-- Menu -->
+            <nav>
+              <ul class="menu menu--right js-menu sf-menu ">
+                <li class="menu__item ">
+                  <a id="menu_home" href="#" class="menu__link">Home</a>
+                </li>
+
+                <li class="menu__item ">
+                  <a id="menu_features" href="#features" class="menu__link js-scroll-to">Features</a>
+                </li>
+                <li class="menu__item ">
+                  <a id="menu_plans" href="#plans" class="menu__link js-scroll-to">Plans</a>
+                </li>
+                <li class="menu__item ">
+                  <a id="menu_gallery" href="#gallery" class="menu__link js-scroll-to">Gallery</a>
+                </li>
+                <li class="menu__item menu__item--button">
+                  <a id="menu_login" onclick="goto_login();" class="menu__link js-scroll-to">Log in</a>
+                </li>
+                <li class="menu__item">
+                  <a class="fontello-globe menu__link"></a>
+                  <ul class="menu__child">
+                    <li class="menu__item ">
+                      <a href="../en/index.html" class="menu__link">English</a>
+                    </li>
+                    <li class="menu__item ">
+                      <a href="../de/index.html" class="menu__link">Deutsche</a>
+                    </li>
+                    <li class="menu__item ">
+                      <a href="../fr/index.html" class="menu__link">Französisch</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <!-- End of Menu -->
+            <!-- Menu Trigger -->
+            <a class="menu-trigger js-menu-trigger " href='sidr'> </a>
+            <!-- End of Menu Trigger -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End of Header -->
+
+
+    <!-- Hero -->
+    <div id="hero" class="hero ">
+      <!-- Slider -->
+      <div class="slider js-slider owl-carousel ">
+
+        <div class="slider__slide">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-14">
+                <div class="push push--150"> </div>
+
+                <h2 id="slider_1_title" class="section-title section-title--left section-title--light slider__title">Create a microlanding web page for 
+                  <span id="slider_1_title_span1" class='section-title__highlight'>business</span> and 
+                  <span id="slider_1_title_span2" class='section-title__highlight'>increase sales</span>
+                </h2>
+                <p id="slider_1_subtitle" class="section-subtitle section-subtitle--left section-subtitle--hero">Spend 10 minutes to create an excellent landing using our service, but increase sales conversion permanently.</p>
+                <div>
+                  <div class="button button--small button--inline button--shadow">
+                    <a href="#features" class="button__link js-scroll-to">Learn more</a>
+                  </div>
+                  <div class="button button--small button--inline button--blue button--shadow">
+                    <a href="#" class="button__link">Start for free</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-10">
+                <div class="slider__content device--right">
+                  <img src="http://placehold.it/949x1170" class="slider__image" alt="Business microlanding"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider__slide">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-14">
+                <div class="push push--150"> </div>
+
+                <h2 class="section-title section-title--left section-title--light slider__title">Extend your
+                  <span class='section-title__highlight'> Instagram</span> profile and convert your <span class='section-title__highlight'>visitors to clients</span>
+                </h2>
+                <p class="section-subtitle section-subtitle--left section-subtitle--hero">Use your imagination and our tools to promote your services or products without Instagram limitations.</p>
+                <div>
+                  <div class="button button--small button--inline button--shadow">
+                    <a href="#features" class="button__link js-scroll-to">Learn more</a>
+                  </div>
+                  <div class="button button--small button--inline button--blue button--shadow  ">
+                    <a href="#" class="button__link">Start for free</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-10">
+                <div class="slider__content device--right">
+                  <img src="http://placehold.it/949x1170" class="slider__image" alt="Instagram multilink"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- End of Slider -->
+    </div>
+    <!-- End of Hero -->
+
+    <!-- Section -->
+    <section class="section section--skin-1" id='features'>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <div class="push push--60"> </div>
+            <h2 class="section-title">Move your business to the web now!</h2>
+            <p class="section-subtitle">Create your own web page in few minutes</p>
+            <ul class="list list--check">
+              <li class="list__item"><span class='section-title__highlight'>Excellent style</span><br/>Large library of templates from designers</li>
+              <li class="list__item"><span class='section-title__highlight'>Easy start</span><br/>No web design or programming skills required</li>
+              <li class="list__item"><span class='section-title__highlight'>Change quickly</span><br/>Create a web page based on a template using the principle: see what you change</li>
+              <li class="list__item"><span class='section-title__highlight'>Fair deal</span><br/>No additional costs for development and running - only our modest subscription</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-12 col-md-11 col-md-offset-1 col-lg-offset-0">
+            <!-- Screens Preview -->
+            <div class="screens-preview screens-preview--right  ">
+              <img src="http://placehold.it/640x1130" class="screens-preview__primary" alt="Primary Screenshot"/>
+            </div>
+            <!-- End of Screens Preview -->
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-13 col-md-13">
+            <!-- Screens Preview -->
+            <div class="screens-preview  ">
+              <img src="http://placehold.it/640x1130" class="screens-preview__primary" alt="Primary Screenshot"/>
+            </div>
+            <!-- End of Screens Preview -->
+          </div>
+
+          <div class="col-lg-11 col-md-10 col-lg-offset-0 col-md-offset-1">
+            <!-- Push -->
+            <div class="push push--100  "> </div>
+            <!-- End of Push -->
+            <!-- Section Title -->
+            <h2 class="section-title ">Convert your visitors to clients</h2>
+            <!-- End of Section Title -->
+            <!-- Section Subtitle -->
+            <p class="section-subtitle ">Increase sales by collecting summary info, selling offer and contacts in a beautifully packed page</p>
+            <!-- End of Section Subtitle -->
+
+            <!-- Accordion -->
+            <ul class="accordion js-accordion ">
+              <li class="accordion__item">
+                <h3 class="accordion__title">
+                  <img src="http://placehold.it/60x80" class="accordion__icon" alt="Accordion Icon"/>Instagram profile extension</h3>
+                <div class="accordion__content">
+                  <p>Place additional information and content, which do not fit into your Instagram profile, to your web page. It can be multiple (instead of one) links to social networks, messengers and other online services, selling offer, additional portfolio images and so on.</p>
+                </div>
+              </li>
+
+              <li class="accordion__item">
+                <h3 class="accordion__title">
+                  <img src="http://placehold.it/60x80" class="accordion__icon" alt="Accordion Icon"/>Share contacts</h3>
+                <div class="accordion__content">
+                  <p>Easily share all ways how you can be reached. Nice pre-designed buttons for various messengers like Whatsapp, Telegram, Skype and others are provided for all templates.</p>
+                </div>
+              </li>
+
+              <li class="accordion__item">
+                <h3 class="accordion__title">
+                  <img src="http://placehold.it/60x80" class="accordion__icon" alt="Accordion Icon"/>Micro landing for business</h3>
+                <div class="accordion__content">
+                  <p>Ideal for small businesses and self-employed professionals. Place your key features and call to action onto the page to increase the visitors conversion rate.</p>
+                </div>
+              </li>
+
+              <li class="accordion__item">
+                <h3 class="accordion__title">
+                  <img src="http://placehold.it/60x80" class="accordion__icon" alt="Accordion Icon"/>Online visit card</h3>
+                <div class="accordion__content">
+                  <p>Create personal visit card in a practical and modern fashion way. Use QR-code or the direct link to share it.</p>
+                </div>
+              </li>
+
+            </ul>
+            <!-- End of Accordion -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Section -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-24">
+          <a href="https://www.youtube.com/channel/UCURdgtCIpdVm1EoN931WLAg" class="section__button section__button--instagram">Our blog</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section -->
+    <section class="section section--large section--grey" id='plans'>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-24">
+            <h2 class="section-title section-title--center ">Pricing
+              <span class='section-title__highlight'> plans</span>
+            </h2>
+            <p class="section-subtitle section-subtitle--center ">Choose the plan that suits you best</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-8 col-sm-16 col-sm-offset-4 col-md-offset-0">
+            <div class="pricing  ">
+              <h3 class="pricing__title">Starter Plan</h3>
+              <h4 class="pricing__price">free</h4>
+
+              <ul class="pricing__features">
+                <li class="pricing__feature"><span class="pricing__highlight">1 month</span> free access to everything</li>
+                <li class="pricing__feature"><span class="pricing__highlight">1 page</span> for personal usage</li>
+                <li class="pricing__feature"><span class="pricing__highlight">All </span>blocks and features</li>
+                <li class="pricing__feature"><span class="pricing__highlight">Full </span>templates library</li>
+              </ul>
+              <div class="button button--small button--shadow button--dark">
+                <a href="" class="button__link">Sign up</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-8 col-sm-16 col-sm-offset-4 col-md-offset-0">
+            <div class="pricing pricing--featured  ">
+              <h3 class="pricing__title">Basic Plan</h3>
+              <h4 class="pricing__price">
+                <span class="pricing__placeholder">
+                  <span class="pricing__currency">$</span> 4
+                  <span class="pricing__frequency">/mo</span>
+                </span>
+              </h4>
+
+              <ul class="pricing__features">
+                <li class="pricing__feature"><span class="pricing__highlight">1 page</span> for personal usage</li>
+                <li class="pricing__feature"><span class="pricing__highlight">Basic</span> blocks set</li>
+                <li class="pricing__feature"><span class="pricing__highlight">Basic</span> templates set</li>
+                <li class="pricing__feature">
+                  <span class="pricing__highlight">Our logo</span> in the corner</li>
+              </ul>
+
+              <div class="button button--small button--shadow button--dark  ">
+                <a href="" class="button__link">Sign up</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-8 col-sm-16 col-sm-offset-4 col-md-offset-0">
+            <div class="pricing  ">
+              <h3 class="pricing__title">Premium Plan</h3>
+              <h4 class="pricing__price">
+                <span class="pricing__placeholder">
+                  <span class="pricing__currency">$</span> 8
+                  <span class="pricing__frequency">/mo</span>
+                </span>
+              </h4>
+
+              <ul class="pricing__features">
+                <li class="pricing__feature"><span class="pricing__highlight">Up to 5</span> web pages</li>
+                <li class="pricing__feature"><span class="pricing__highlight">All </span>blocks and features</li>
+                <li class="pricing__feature"><span class="pricing__highlight">Full</span> templates library</li>
+                <li class="pricing__feature pricing__feature--passive">Our logo in the corner</li>
+              </ul>
+              <div class="button button--small button--shadow button--dark  ">
+                <a href="" class="button__link">Sign up</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Section -->
+
+    <!-- Section -->
+    <section class="section section--large section--grey" id='gallery'>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-24">
+            <h2 class="section-title section-title--center ">User pages
+              <span class='section-title__highlight'>gallery</span>
+            </h2>
+            <p class="section-subtitle section-subtitle--center">See awesome examples created by users using our service</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel">
+        <div class="carousel__outer">
+          <div class="carousel__inner js-carousel owl-carousel">
+            <div class="carousel__slide">
+              <img src="http://placehold.it/432x768" class="carousel__image" alt="Carousel Slide Image"/>
+              <h3 class="carousel__title">Edit screen</h3>
+            </div>
+            <div class="carousel__slide">
+              <img src="http://placehold.it/432x768" class="carousel__image" alt="Carousel Slide Image"/>
+              <h3 class="carousel__title">Tasks</h3>
+            </div>
+            <div class="carousel__slide">
+              <img src="http://placehold.it/432x768" class="carousel__image" alt="Carousel Slide Image"/>
+              <h3 class="carousel__title">Achievements</h3>
+            </div>
+            <div class="carousel__slide">
+              <img src="http://placehold.it/432x768" class="carousel__image" alt="Carousel Slide Image"/>
+              <h3 class="carousel__title">Search</h3>
+            </div>
+            <div class="carousel__slide">
+              <img src="http://placehold.it/432x768" class="carousel__image" alt="Carousel Slide Image"/>
+              <h3 class="carousel__title">Card overlay</h3>
+            </div>
+            <div class="carousel__slide">
+              <img src="http://placehold.it/432x768" class="carousel__image" alt="Carousel Slide Image"/>
+              <h3 class="carousel__title">Player</h3>
+            </div>
+            <div class="carousel__slide">
+              <img src="http://placehold.it/432x768" class="carousel__image" alt="Carousel Slide Image"/>
+              <h3 class="carousel__title">Dashboard</h3>
+            </div>
+            <div class="carousel__slide">
+              <img src="http://placehold.it/432x768" class="carousel__image" alt="Carousel Slide Image"/>
+              <h3 class="carousel__title">Shop</h3>
+            </div>
+            <div class="carousel__slide">
+              <img src="http://placehold.it/432x768" class="carousel__image" alt="Carousel Slide Image"/>
+              <h3 class="carousel__title">Camera</h3>
+            </div>
+            <div class="carousel__slide">
+              <img src="http://placehold.it/432x768" class="carousel__image" alt="Carousel Slide Image"/>
+              <h3 class="carousel__title">Stats</h3>
+            </div>
+            <div class="carousel__slide">
+              <img src="http://placehold.it/432x768" class="carousel__image" alt="Carousel Slide Image"/>
+              <h3 class="carousel__title">New article</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="socials socials--displaced  ">
+        <li class="socials__item">
+          <a href="#" class="socials__button socials__button--instagram">
+            <i class="fontello-instagram socials__icon"></i>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a href="#" class="socials__button socials__button--facebook">
+            <i class="fontello-facebook socials__icon"></i>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a href="#" class="socials__button socials__button--linkedin">
+            <i class="fontello-linkedin socials__icon"></i>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- End of Section -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <a href="#" class="footer__scroll-top js-scroll-top">
+        <i class="fontello-level-up footer__scroll-icon"></i>
+      </a>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+          <div class="push push--30"> </div>
+
+            <!-- Logo -->
+            <div class="logo ">
+              <a href="index.html" class="logo__link">
+                <img src="../assets/img/common/logo/logo-dark.png" alt="Logo" class="logo__image"/> </a>
+            </div>
+            <!-- End of Logo -->
+
+            <p class="footer__message">©2021 my-info.click</p>
+          </div>
+          <div class="col-md-5 col-sm-12 col-xs-12 col-md-offset-2">
+            <!-- Link List -->
+            <nav class="link-list  ">
+              <ul>
+                <li class="link-list__item">
+                  <a href="#" class="link-list__link">Privacy policy</a>
+                </li>
+                <li class="link-list__item">
+                  <a href="#" class="link-list__link">Term of use</a>
+                </li>
+                <li class="link-list__item">
+                  <a href="#" class="link-list__link">Contact us</a>
+                </li>
+              </ul>
+            </nav>
+            <!-- End of Link List -->
+          </div>
+          <div class="col-md-5 col-sm-12 col-xs-12">
+            <!-- Link List -->
+            <nav class="link-list  ">
+              <ul>
+                <li class="link-list__item">
+                  <a href="https://www.linkedin.com/" class="link-list__link">LinkedIn</a>
+                </li>
+                <li class="link-list__item">
+                  <a href="http://facebook.com" class="link-list__link">Facebook</a>
+                </li>
+                <li class="link-list__item">
+                  <a href="http://instagram.com/vladsargu" class="link-list__link">Instagram</a>
+                </li>
+              </ul>
+            </nav>
+            <!-- End of Link List -->
+          </div>
+        </div>
+      </div>
+
+    </footer>
+    <!-- End of Footer -->
+  </div>
+  <!-- End of Page -->
+
+  <!-- Scripts -->
+  <script>var scrollHeader = true;</script>
+  <script src="../dist/script.js"></script>
+  <!-- End of Scripts -->
+
+<script>
+  function goto_login(){
+    window.location.href = "https://wcr.auth.eu-central-1.amazoncognito.com/login?response_type=token&client_id=1997vd1jbpfnctf52sdd4v34nt&redirect_uri=https://d2k0jn9xzko4hw.cloudfront.net/auth.html";
+  }
+</script>
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <!-- 
+<script>
+(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+e.src='//www.google-analytics.com/analytics.js';
+r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+</script>
+-->
+  <!-- End of Analytics -->
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Rubik:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Oswald:wght@400;500&family=Rubik:wght@300;400&display=swap');
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* main */
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../img/bg.png');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.name {
+    position: absolute;
+    top: 4.197%;
+    left: 5.0666%;
+    font-family: 'Rubik';
+    font-weight: 300;
+    font-size: 2.398vh;
+}
+
+.name::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -1.33vw;
+    width: 1px;
+    background-color: #757575;
+    height: 5.84707vh;
+}
+
+.name span {
+    font-weight: 400;
+}
+
+.phone {
+    position: absolute;
+    top: 3.5982vh;
+    right: 2.4vw;
+    font-family: 'Rubik';
+    text-align: right;
+}
+
+.phone a {
+    font-weight: 300;
+    font-size: 2.548vh;
+    line-height: 20px;
+    color: #403F48;
+    display: block;
+}
+
+.phone span {
+    position: relative;
+    font-size: 1.64917vh;
+    color: #403F48;
+}
+
+.phone span:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #403F48;
+    position: absolute;
+    left: 0;
+    bottom: -0.4vh;
+}
+
+.info {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    top: 15.592vh;
+}
+
+.info svg {
+    width: 41.3333vw;
+    margin-bottom: 1.799vh;
+}
+
+.info p {
+    font-family: 'Rubik';
+    font-size: 2.248vh;
+    color: #474747;
+}
+
+.decor {
+    position: absolute;
+    top: 11.544vh;
+    left: 0.8vw;
+    width: 91.4666vw;
+}
+
+.decor2 {
+    position: absolute;
+    right: -1.6vw;
+    bottom: 11.244377vh;
+    width: 26.1333vw;
+    z-index: 4;
+    pointer-events: none;
+}
+
+.button-box {
+    position: absolute;
+    bottom: 4.7976vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.button-box img {
+    width: 67.4666vw;
+    display: block;
+    margin: 0 auto;
+}
+
+.button-box a {
+    background: linear-gradient(94.86deg, #2599B2 2.13%, #074451 121.81%);
+    box-shadow: 0px 2px 0px #074451;
+    border-radius: 10px;
+    width: 71.73333vw;
+    height: 10.494752vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rubik';
+    font-weight: 500;
+    font-size: 2.93333vw;
+    color: #FFFFFF;
+}
+
+.social {
+    position: absolute;
+    top: 42.128935532vh;
+    right: 4.53333vw;
+}
+
+.social a {
+    display: block;
+    margin-bottom: 3.44827vh;
+    width: 7.466666vw;
+}
+
+.social a img {
+    width: 100%;
+}
+
+.social a:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 700px) {
+    .button-box img {
+        width: 23vw;
+    }
+    .button-box a {
+        width: 600px;
+        height: 100px;
+        font-size: 26px;
+    }
+    .decor {
+        width: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .social {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .social a {
+        width: 2.5vw;
+    }
+    .decor2 {
+        width: 10vw;
+    }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+  <title>Authentication parameters</title>
+</head>
+
+<body>
+  <h1>Authentication parameters</h1>
+  <div id='params_text'></div>
+  <a href="editor.html">Editor</a>
+
+<script>
+  var hash = window.location.hash.substr(1);
+
+  var result = hash.split('&').reduce(function (res, item) {
+      var parts = item.split('=');
+      res[parts[0]] = parts[1];
+      return res;
+  }, {});
+
+  block = document.getElementById("params_text");
+  for (item in result) {
+      block.innerHTML += `<p> ${item}:<br>${result[item]}</p>`;
+      window.localStorage.setItem(`wcr_${item}`, result[item]);
+      console.log(item);
+  }
+  access_token = localStorage.getItem("wcr_access_token");
+  console.log(access_token);
+</script>
+</body>

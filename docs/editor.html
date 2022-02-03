@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+  <title>Authentication parameters</title>
+</head>
+
+<body>
+  <div>
+    <h1>Authentication parameters</h1>
+    <p id='params_text'>test</p>
+  </div>
+
+  <div>
+    <button onclick="httpGetAsync()">Turn on overlay effect</button>
+    <p id='result_text'>test</p>
+  </div>
+
+<script>
+  console.log('foo');
+  access_token = window.localStorage.getItem("wcr_access_token");
+  console.log(access_token);
+
+  block = document.getElementById("params_text")
+  block.innerHTML = access_token;
+
+  function response_handler(responseText)
+  {
+    document.getElementById("result_text").innerHTML = responseText;
+  }
+
+  function httpGetAsync()
+  {
+    var theUrl = "https://e7wqns4290.execute-api.eu-central-1.amazonaws.com/items/abcdef234";
+    var callback = response_handler;
+    var xmlHttp = new XMLHttpRequest();
+
+    xmlHttp.open("GET", theUrl, true);
+    xmlHttp.withCredentials = true;
+    xmlHttp.onreadystatechange = function() {
+      if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+          callback(xmlHttp.responseText);
+    }
+
+    xmlHttp.setRequestHeader('Authorization', access_token);
+    xmlHttp.send(null);
+  }
+
+</script>
+</body>
