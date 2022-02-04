@@ -71,7 +71,9 @@ function selectTemplate () {
 
 	const allCardsImg = document.querySelectorAll('.templateSlide > img')
 
-	console.log(allCardsImg)
+	function getKeyByValue(object, value) {
+		return Object.keys(object).find(key => object[key] === value);
+	}
 
 	
 	wcr_templates = {
@@ -105,8 +107,7 @@ function selectTemplate () {
 
 	for(let el of allCardsImg){
 		el.onclick = () => {
-			console.log('dfjdhfjdhfj')
-			templateName = (el.src).replace('https:d3uexwp24ewwim.cloudfront.net/editor/templates/', '').replace('/img/main-bg.png', '')
+			templateName = (el.src).replace('https://d3uexwp24ewwim.cloudfront.net/editor/templates/', '').replace('/img/main-bg.png', '')
 		   
 			popup.classList.add('active')
 
@@ -124,7 +125,7 @@ function selectTemplate () {
 		indexTemplate += 1
 		checkIndex()
 
-		templateName = tempData[indexTemplate]['url'].replace('https:d3uexwp24ewwim.cloudfront.net/editor/templates/', '')
+		templateName = tempData[indexTemplate]['url'].replace('https://d3uexwp24ewwim.cloudfront.net/editor/templates/', '')
 
 		imgSiteSelect.src = tempData[indexTemplate]['url'] + '/img/main-bg.png'
 	}
@@ -133,14 +134,13 @@ function selectTemplate () {
 		indexTemplate -= 1
 		checkIndex()
 	   
-		templateName = tempData[indexTemplate]['url'].replace('https:d3uexwp24ewwim.cloudfront.net/editor/templates/', '')
+		templateName = tempData[indexTemplate]['url'].replace('https://d3uexwp24ewwim.cloudfront.net/editor/templates/', '')
 
 		imgSiteSelect.src = tempData[indexTemplate]['url'] + '/img/main-bg.png'
 	}
 
 	selectCreateBtn.onclick = () => {
-		let id = wcr_templates.getKeyByValue(templateName)
-
+		let id = getKeyByValue(wcr_templates, templateName)
 		let oReq = new XMLHttpRequest();
 		oReq.open("GET", 'https:e7wqns4290.execute-api.eu-central-1.amazonaws.com/user/create/' + id, true);
 		oReq.setRequestHeader("Authorization", "1");
@@ -156,9 +156,6 @@ function selectTemplate () {
 function load() {
     updateCards()
 	setTimeout(() => {selectTemplate()}, 1000);
-	
-    
-	
 } 
 
 load()
