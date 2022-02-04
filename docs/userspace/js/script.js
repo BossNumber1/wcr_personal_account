@@ -20,9 +20,9 @@ const mainData = [
 ]
 
 let mainPagesData = [
-    {'url':'https://d3uexwp24ewwim.cloudfront.net/editor/user/1/page/X3XAIYKXGEFQ',
-    'title': 'User page title'},
-    {'url':'https://d3uexwp24ewwim.cloudfront.net/editor/user/1/page/ON6394RN3P1P',
+    {'url':'https://d3uexwp24ewwim.cloudfront.net/drafts/1/X3XAIYKXGEFQ',
+    'title': 'User page title1'},
+    {'url':'https://d3uexwp24ewwim.cloudfront.net/drafts/1/ON6394RN3P1P',
     'title': 'User page title'},
 ]
 
@@ -54,12 +54,21 @@ function userPages (data) {
 	const pagesText = document.querySelector('.pagesText')
 	console.log(data)
 	if(data.length != 0){
+		
+		// pagesSlider.innerHTML = data.map(item => 
+		// 	`<div class="carousel__slide pagesSlide">
+		// 		<img src="${item['url']}/img/main-bg.png" class="carousel__image" alt="Carousel Slide Image"/>
+		// 		<h3 class="carousel__title">${item['title']}</h3>
+		// 	  </div>`
+		// ).join('')
+
 		pagesSlider.innerHTML = data.map(item => 
-			`<div class="carousel__slide templateSlide">
-				<img src="${item['url']}/img/main-bg.png" class="carousel__image" alt="Carousel Slide Image"/>
+			`<div class="carousel__slide pagesSlide">
+				<iframe width="310" height="560" scrolling="no" style="overflow: hidden; user-select: all; border: 0;" src="${item['url']}/index.html" class="carousel__image" alt="Carousel Slide Image"/>
 				<h3 class="carousel__title">${item['title']}</h3>
 			  </div>`
 		).join('')
+
 		pagesCarouselBlock.style.display = "block"
 		pagesText.style.display = "none"
 	}else{
