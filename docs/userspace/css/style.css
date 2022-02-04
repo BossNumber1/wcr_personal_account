@@ -87,14 +87,14 @@
     padding: 10px 20px;
 }
 
+.pagesSlide > iframe{
+    display: block;
+    user-select: all;
+    border: 0;
+    overflow: hidden;
+}
+
 @media(min-width:426px){
-    .cards{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        padding: 0 20px;
-        padding-top: 10px;
-        grid-gap: 15px;
-    }
     .selectTemplateBlock img{
         height: 550px;
     }
@@ -107,13 +107,6 @@
 }
 
 @media(min-width:1024px){
-    .cards{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        padding: 0 20px;
-        padding-top: 10px;
-        grid-gap: 15px;
-    }
     .selectIcon{
         font-size: 42px;
     }

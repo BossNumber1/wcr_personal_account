@@ -64,7 +64,7 @@ function userPages (data) {
 
 		pagesSlider.innerHTML = data.map(item => 
 			`<div class="carousel__slide pagesSlide">
-				<iframe width="310" height="560" scrolling="no" style="overflow: hidden; user-select: all; border: 0;" src="${item['url']}/index.html" class="carousel__image" alt="Carousel Slide Image"/>
+				<iframe width="310" height="560" scrolling="no" seamless src="${item['url']}/index.html" class="carousel__image" alt="Carousel Slide Image"/>
 				<h3 class="carousel__title">${item['title']}</h3>
 			  </div>`
 		).join('')
