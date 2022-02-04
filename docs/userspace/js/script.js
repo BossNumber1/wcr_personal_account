@@ -155,7 +155,7 @@ function selectTemplate () {
 
 function load() {
     updateCards()
-	setTimeout(() => {selectTemplate()}, 1000);
+	setTimeout(() => {selectTemplate()}, 3000);
 } 
 
 load()
