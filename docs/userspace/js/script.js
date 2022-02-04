@@ -17,25 +17,18 @@ const mainData = [
     'tags': ['person', 'business'], 'description': 'Sample text to display'},
     {'url':'https://d3uexwp24ewwim.cloudfront.net/editor/templates/micro/smm',
     'tags': ['person', 'beauty'], 'description': 'Sample text to display'},
-    ]
+]
 
-// Object.prototype.getKeyByValue = function(value, objs) {
-//     // защита от циклических ссылок
-//     if (!objs)
-//       objs = [];
-//     for (var prop in this) {
-//       if (this.hasOwnProperty(prop)) {
-//         if (this[prop] === value) {
-//           return prop;
-//         } else if (typeof this[prop] === "object" && objs.indexOf(this[prop]) == -1) {
-//           objs.push(this[prop]);
-//           var res = this[prop].getKeyByValue(value, objs);
-//           if (res)
-//             return prop + "." + res; //за дополнительные баллы оценки - выведем цепочку названий ключей
-//         }
-//       }
-//     }
-//   }
+let mainPagesData = [
+    {'url':'https://d3uexwp24ewwim.cloudfront.net/editor/user/1/page/X3XAIYKXGEFQ',
+    'title': 'User page title'},
+    {'url':'https://d3uexwp24ewwim.cloudfront.net/editor/user/1/page/ON6394RN3P1P',
+    'title': 'User page title'},
+]
+
+
+
+
 
 let tempData = []
 tempData = mainData
@@ -53,6 +46,26 @@ function updateCards(){
 	  	</div>`
     ).join('')
 
+}
+
+function userPages (data) {
+	const pagesCarouselBlock = document.querySelector('.pagesCarouselBlock')
+	const pagesSlider = document.querySelector('.pagesSlider')
+	const pagesText = document.querySelector('.pagesText')
+	console.log(data)
+	if(data.length != 0){
+		pagesSlider.innerHTML = data.map(item => 
+			`<div class="carousel__slide templateSlide">
+				<img src="${item['url']}/img/main-bg.png" class="carousel__image" alt="Carousel Slide Image"/>
+				<h3 class="carousel__title">${item['title']}</h3>
+			  </div>`
+		).join('')
+		pagesCarouselBlock.style.display = "block"
+		pagesText.style.display = "none"
+	}else{
+		pagesCarouselBlock.style.display = "none"
+		pagesText.style.display = "block"
+	}
 }
 
 
@@ -155,6 +168,7 @@ function selectTemplate () {
 
 function load() {
     updateCards()
+	userPages(mainPagesData)
 	setTimeout(() => {selectTemplate()}, 3000);
 } 
 
