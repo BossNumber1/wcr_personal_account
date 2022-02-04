@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+.fixed-overlay {
+    position: fixed;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.fixed-overlay__modal {
+    display: none;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.fixed-overlay__modal.active{
+    display: block;
+}
+
+.fixed-overlay__modal::after {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 100%;
+    content: '';
+}
+
+.modal {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.modal_container {
+    padding: 20px 0;
+    width: 90vw;
+    min-height: 50vh;
+    height: fit-content;
+    text-align: left;
+    white-space: normal;
+    background-color: #fff;    
+    color: #000;
+    position: relative;
+    z-index: 1000;
+}
+
+.selectTemplateBlock{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.selectTemplateBlock img{
+    height: 400px;
+    display: block;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.selectCreateBtn{
+    display: block;
+    padding: 3px 6px;
+    background-color: #11d171;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+.searchInput{
+    border-radius: 10px;
+    padding: 4px 6px;
+    width: 205px;
+}
+
+.selectTemplateBtns{
+    margin: 20px 0;
+    margin-bottom: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+@media(min-width:426px){
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 20px;
+        padding-top: 10px;
+        grid-gap: 15px;
+    }
+    .selectTemplateBlock img{
+        height: 550px;
+    }
+    .selectIcon{
+        font-size: 35px;
+    }
+    .selectCreateBtn{
+        font-size: 20px;
+    }
+}
+
+@media(min-width:1024px){
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0 20px;
+        padding-top: 10px;
+        grid-gap: 15px;
+    }
+    .selectIcon{
+        font-size: 42px;
+    }
+    .selectCreateBtn{
+        font-size: 24px;
+    }
+}
