@@ -52,7 +52,7 @@ function userPages (data) {
 	const pagesCarouselBlock = document.querySelector('.pagesCarouselBlock')
 	const pagesSlider = document.querySelector('.pagesSlider')
 	const pagesText = document.querySelector('.pagesText')
-	console.log(data)
+
 	if(data.length != 0){
 		
 		// pagesSlider.innerHTML = data.map(item => 
@@ -62,10 +62,13 @@ function userPages (data) {
 		// 	  </div>`
 		// ).join('')
 
+		console.log(data.map(item => item['url']))
+
 		pagesSlider.innerHTML = data.map(item => 
 			`<div class="carousel__slide pagesSlide">
 				<iframe width="310" height="560" scrolling="no" seamless src="${item['url']}/index.html" class="carousel__image" alt="Carousel Slide Image"/>
 				<h3 class="carousel__title">${item['title']}</h3>
+				<div class="overlayPagesSlider"></div>
 			  </div>`
 		).join('')
 
