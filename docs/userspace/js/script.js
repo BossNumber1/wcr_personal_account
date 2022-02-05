@@ -20,10 +20,23 @@ const mainData = [
 ]
 
 let mainPagesData = [
-    {'url':'https://d3uexwp24ewwim.cloudfront.net/drafts/1/X3XAIYKXGEFQ',
+    /*{'url':'https://d3uexwp24ewwim.cloudfront.net/drafts/1/X3XAIYKXGEFQ',
     'title': 'User page title1'},
     {'url':'https://d3uexwp24ewwim.cloudfront.net/drafts/1/ON6394RN3P1P',
-    'title': 'User page title'},
+    'title': 'User page title9'},
+	{'url':'https://d3uexwp24ewwim.cloudfront.net/drafts/1/ON6394RN3P1P',
+    'title': 'User page title5'},
+	{'url':'https://d3uexwp24ewwim.cloudfront.net/drafts/1/ON6394RN3P1P',
+    'title': 'User page title3'},*/
+	{'userid':'1',
+	'siteid':'X3XAIYKXGEFQ',
+    'title': 'User page title1'},
+	{'userid':'1',
+	'siteid':'ON6394RN3P1P',
+	'title': 'User page title2'},
+	{'userid':'1',
+	'siteid':'9XC2M35X6GEL',
+	'title': 'User page title3'},
 ]
 
 
@@ -53,27 +66,39 @@ function userPages (data) {
 	const pagesSlider = document.querySelector('.pagesSlider')
 	const pagesText = document.querySelector('.pagesText')
 
+	function pageSlides(){
+		const pageSlide = document.querySelectorAll('.overlayPagesSlider')
+
+		for(let slide of pageSlide){
+			slide.onclick = () => {
+				location.href = `https:d3uexwp24ewwim.cloudfront.net/editor/edit.html?userid=${slide.parentElement.dataset.wcrUserid}&siteid=${slide.parentElement.dataset.wcrSiteid}`
+			}
+		}
+	}
+
 	if(data.length != 0){
-		
+
 		// pagesSlider.innerHTML = data.map(item => 
 		// 	`<div class="carousel__slide pagesSlide">
-		// 		<img src="${item['url']}/img/main-bg.png" class="carousel__image" alt="Carousel Slide Image"/>
+		// 		<iframe width="300" height="550" scrolling="no" src="${item['url']}/index.html" class="carousel__image" alt="Carousel Slide Image">No support</iframe>
 		// 		<h3 class="carousel__title">${item['title']}</h3>
+		// 		<div class="overlayPagesSlider"></div>
 		// 	  </div>`
 		// ).join('')
 
-		console.log(data.map(item => item['url']))
-
 		pagesSlider.innerHTML = data.map(item => 
-			`<div class="carousel__slide pagesSlide">
-				<iframe width="310" height="560" scrolling="no" seamless src="${item['url']}/index.html" class="carousel__image" alt="Carousel Slide Image"/>
+			`<div class="carousel__slide pagesSlide" data-wcr-userid="${item['userid']}" data-wcr-siteid="${item['siteid']}">
+				<iframe width="300" height="550" scrolling="no" src="https://d3uexwp24ewwim.cloudfront.net/drafts/${item['userid']}/${item['siteid']}/index.html" class="carousel__image" alt="Carousel Slide Image">No support</iframe>
 				<h3 class="carousel__title">${item['title']}</h3>
 				<div class="overlayPagesSlider"></div>
 			  </div>`
 		).join('')
 
+
 		pagesCarouselBlock.style.display = "block"
 		pagesText.style.display = "none"
+
+		setTimeout(() => {pageSlides()}, 3000);
 	}else{
 		pagesCarouselBlock.style.display = "none"
 		pagesText.style.display = "block"

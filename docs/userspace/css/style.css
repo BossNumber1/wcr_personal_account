@@ -88,11 +88,7 @@
 }
 
 .pagesSlide > iframe{
-    display: block;
-    user-select: all;
     border: 0;
-    overflow: hidden;
-    touch-action: auto;
 }
 
 .pagesSlide {
