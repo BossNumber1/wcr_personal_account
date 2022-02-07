@@ -89,10 +89,14 @@
 
 .pagesSlide > iframe{
     border: 0;
+    width: 240px;
+    height: 425px;
 }
-
 .pagesSlide {
+    height: 100%;
+    width: 100%;
     position: relative;
+    margin: 0 auto;
 }
 
 .overlayPagesSlider{

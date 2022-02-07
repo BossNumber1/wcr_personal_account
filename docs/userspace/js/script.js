@@ -88,7 +88,7 @@ function userPages (data) {
 
 		pagesSlider.innerHTML = data.map(item => 
 			`<div class="carousel__slide pagesSlide" data-wcr-userid="${item['userid']}" data-wcr-siteid="${item['siteid']}">
-				<iframe width="300" height="550" scrolling="no" src="https://d3uexwp24ewwim.cloudfront.net/drafts/${item['userid']}/${item['siteid']}/index.html" class="carousel__image" alt="Carousel Slide Image">No support</iframe>
+				<iframe scrolling="no" src="https://d3uexwp24ewwim.cloudfront.net/drafts/${item['userid']}/${item['siteid']}/index.html" class="carousel__image" alt="Carousel Slide Image">No support</iframe>
 				<h3 class="carousel__title">${item['title']}</h3>
 				<div class="overlayPagesSlider"></div>
 			  </div>`
