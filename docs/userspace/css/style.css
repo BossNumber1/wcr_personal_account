@@ -93,7 +93,7 @@
     height: 570px;
 }
 .pagesSlide > iframe {
-    zoom: 0.75;
+    zoom: 0.5;
     -moz-transform: scale(0.75);
     -moz-transform-origin: 0 0;
     -o-transform: scale(0.75);
