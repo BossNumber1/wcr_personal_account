@@ -22087,12 +22087,12 @@ return function (global, window, document, undefined) {
 		carousel.on('initialized.owl.carousel', function() {
 			$(this).find('.owl-item.active:first, .owl-item.active:last').addClass('has-fade');
 		}).owlCarousel({
-			loop:true,
+			loop:false,
 			responsive: {
-				0:    { items: 3 },
-				768:  { items: 4 },
-				991:  { items: 5 },
-				1200: { items: 7 }
+				0:    { items: 1 },
+				768:  { items: 1 },
+				991:  { items: 1 },
+				1200: { items: 1 }
 			}
 		}).on("drag.owl.carousel", function() {
 			$(this).find('.has-fade').removeClass('has-fade');
