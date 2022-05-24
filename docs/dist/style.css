@@ -6162,6 +6162,11 @@ body.logged-in .YouTubePopUp-Wrap {
   /* fix for flashing background */
   -webkit-transform: translate3d(0px, 0px, 0px);
 }
+
+.carousel {
+  width: 100%;
+}
+
 .owl-carousel .owl-item {
   position: relative;
   min-height: 1px;
@@ -7650,6 +7655,11 @@ body.logged-in .YouTubePopUp-Wrap {
   display: none;
   -webkit-perspective: 1000px;
 }
+
+.js-preload-me {
+  text-align: center;
+}
+
 .js-preload-me .preloader {
   display: block;
 }
